@@ -1,7 +1,7 @@
 from persona import Persona
 
-class Empleado(Persona):
-    def __init__(self, nombre, genero, edad, ciudad,pais, sueldo):
+class Empleado (Persona):
+    def __init__(self, nombre, genero, edad, ciudad, sueldo,pais):
         Persona.__init__(self, nombre, genero, edad, ciudad, pais)
         self._sueldo = sueldo
 
@@ -13,6 +13,6 @@ class Empleado(Persona):
     def sueldo(self, value):
         self._sueldo = value
 
-if __name__ == '__main__':
-    emp1 = Empleado("Mario", "M", 25, "Guayaquil",'Ecuador', 500)
-    print(emp1)
+
+emp1 = Empleado(nombre='Luis', genero='M', edad=22, ciudad='guayaquil',pais='Ecuador',sueldo=500)
+print(emp1)
